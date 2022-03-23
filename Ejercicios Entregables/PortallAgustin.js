@@ -37,12 +37,12 @@ class Usuario {
         }
     }
 }
-let usuario1 = new Usuario("Agustín", "Portall Pilosi", [{nombre: "La Ilíada", autor: "Homero"}], ["Perro", "Gato", "Cobayo"])
+let usuario1 = new Usuario("Agustín", "Portall Pilosi", [{nombre: "La Ilíada", autor: "Homero"}, {nombre: "El Cuervo", autor: "Edgar Allan Poe"}], ["Perro", "Gato", "Cobayo", "Tortuga"])
 
 console.log("---------------------------")
 usuario1.getFullName()
 console.log("---------------------------")
-usuario1.addMascota("Pez Dorado")
+usuario1.addMascota("Loro")
 console.log("---------------------------")
 usuario1.countMascotas()
 console.log("---------------------------")
