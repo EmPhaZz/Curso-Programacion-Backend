@@ -37,7 +37,7 @@ class Usuario {
         }
     }
 }
-let usuario1 = new Usuario("Agustín", "Portall Pilosi", [{nombre: "La Ilíada", autor: "Homero"}, {nombre: "El Cuervo", autor: "Edgar Allan Poe"}], ["Perro", "Gato", "Cobayo", "Tortuga"])
+let usuario1 = new Usuario("Agustín", "Portall Pilosi", [{nombre: "La Ilíada", autor: "Homero"}, {nombre: "El Corazón Delator", autor: "Edgar Allan Poe"}], ["Perro", "Gato", "Cobayo", "Tortuga"])
 
 console.log("---------------------------")
 usuario1.getFullName()
