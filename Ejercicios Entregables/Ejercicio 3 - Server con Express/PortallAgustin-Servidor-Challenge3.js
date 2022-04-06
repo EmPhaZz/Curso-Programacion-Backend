@@ -1,6 +1,6 @@
 const express = require("express") //requerimos express
 const fs = require("fs") //requerimos el módulo fs
-const Contenedor = require("../Challenge 2/PortallAgustin-Challenge2") //requerimos la clase Contenedor del ejercicio entregable anterior
+const Contenedor = require("../Ejercicio 2 - Archivos/PortallAgustin-ejercicio-archivos") //requerimos la clase Contenedor del ejercicio entregable anterior
 
 //-------------------------------------------------------PRODUCTOS-------------------------------------------------------//
 
