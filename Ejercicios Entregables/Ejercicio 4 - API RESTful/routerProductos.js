@@ -61,27 +61,25 @@ routerProductos.post("/add", async (req, res) => {
     }
     parsedData.push(NuevoProducto)
 
+
     let aJson = JSON.stringify(productos); //convertimos a JSON
     await fs.promises.writeFile("./productos.json", aJson, null, "\t") //reemplazar valores en el JSON
     console.log("El contenido se guardó correctamente.")
-    res.json(
-/*     <form action="/api/productos" method="post">
-    <ul>
-     <li>
-       <label for="name">Nombre:</label>
-       <input type="text" id="name" name="user_name" />
-     </li>
-     <li>
-       <label for="mail">Correo electrónico:</label>
-       <input type="email" id="mail" name="user_email" />
-     </li>
-     <li>
-       <label for="msg">Mensaje:</label>
-       <textarea id="msg" name="user_message"></textarea>
-     </li>
-     </ul>
-     </form> */
-     )
+    res.json("./form.html")
+})
+
+routerProductos.put("/:id", async (req, res) => {
+    const data = await fs.promises.readFile("./productos.json", "utf-8")
+    const productos = JSON.parse(data)
+    let id = req.params.id
+    const i = productos.findIndex((P) => {
+      if(P.id === id) return true
+      else return false
+    })
+    const ProdUpd =
+
+    productos.push(ProdUpd)
+    res.json({ producto: `El producto a actualizar será:\n ${productos[i]}`}).then(res.reddirect("/:id", { mensaje: `El productos con ${id} se actualizó a:\n ${ProdUpd}`}))
 })
 
 module.exports = routerProductos
